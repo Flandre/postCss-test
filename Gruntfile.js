@@ -4,9 +4,13 @@ module.exports = function(grunt) {
     postcss: {
       options: {
         processors: [
+          require('postcss-will-change')(),
           require('autoprefixer')(),
-          require('cssnext')(),
-          require('precss')()
+          require('postcss-color-rgba-fallback')(),
+          require('postcss-opacity')(),
+          require('postcss-pseudoelements')(),
+          require('postcss-vmin')(),
+          require('pixrem')()
         ]
       },
       dist: {
