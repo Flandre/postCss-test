@@ -1,19 +1,22 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
+
 var autoprefixer = require('autoprefixer');
-var cssnext = require('cssnext');
-var precss = require('precss');
-var vars = require('postcss-simple-vars');
+var color_rgba_fallback = require('postcss-color-rgba-fallback');
+var opacity = require('postcss-opacity');
+var pseudoelements = require('postcss-pseudoelements');
+var vmin = require('postcss-vmin');
+var pixrem = require('pixrem');
+var will_change = require('postcss-will-change');
 gulp.task('css', function(){
   var processors = [
-    autoprefixer({
-      browsers: ['last 2 version']
-    }),
-    cssnext,
-    precss,
-    ({
-      silent: true
-    })
+    will_change,
+    autoprefixer,
+    color_rgba_fallback,
+    opacity,
+    pseudoelements,
+    vmin,
+    pixrem
   ];
   return gulp.src('./src/*.css')
     .pipe(postcss(processors))
