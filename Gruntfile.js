@@ -19,11 +19,11 @@ module.exports = function(grunt) {
     },
     clean: {
       build: {
-        src: ['gruntDest']
+        src: ['gruntDest/*']
       }
     }
   });
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.registerTask('default', ['postcss']);
-}
+};

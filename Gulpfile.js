@@ -5,7 +5,9 @@ var cssnext = require('cssnext');
 var precss = require('precss');
 gulp.task('css', function(){
   var processors = [
-    autoprefixer,
+    autoprefixer({
+      browsers: ['last 2 version']
+    }),
     cssnext,
     precss
   ];
