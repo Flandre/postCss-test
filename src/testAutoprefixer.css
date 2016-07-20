@@ -1,0 +1,12 @@
+@keyframes animationTest {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.animationTest {
+	animation: animationTest 2s;
+}
