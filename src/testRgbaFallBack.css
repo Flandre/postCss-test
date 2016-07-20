@@ -1,0 +1,4 @@
+/* rgba添加颜色降级 */
+.rgbaFallBack {
+	background: rgba(0, 0, 0, 0.5);
+}
