@@ -1,0 +1,4 @@
+/* 伪元素转换 */
+.pseudo-element::before {
+	content: '';
+}

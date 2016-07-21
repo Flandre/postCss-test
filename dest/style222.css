@@ -9,14 +9,10 @@ body{
 }
 
 .cssnext {
-    background: color(red alpha(-10%));
+    background: #ff0000;
+    background: rgba(255, 0, 0, 0.9);
 }
 
 .precss {
-@if 3 < 5 {
-    background: green;
-}
-@else {
-    background: blue;
-}
+background: green
 }

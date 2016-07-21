@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var clean = require('gulp-clean');
 var postcss = require('gulp-postcss');
+var precss = require('precss');
 
 var autoprefixer = require('autoprefixer');
 var color_rgba_fallback = require('postcss-color-rgba-fallback');
@@ -11,6 +12,7 @@ var pixrem = require('pixrem');
 var will_change = require('postcss-will-change');
 gulp.task('css', function(){
   var processors = [
+    precss,
     will_change,
     autoprefixer,
     color_rgba_fallback,
