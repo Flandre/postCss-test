@@ -1,0 +1,4 @@
+/* opacity降级方案 */
+.opacityFallback {
+	opacity: 0.5;
+}

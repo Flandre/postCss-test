@@ -5,7 +5,9 @@ module.exports = function(grunt) {
       options: {
         processors: [
           require('postcss-will-change')(),
-          require('autoprefixer')(),
+          require('autoprefixer')({
+            browsers: ['last 2 version']
+          }),
           require('postcss-color-rgba-fallback')(),
           require('postcss-opacity')(),
           require('postcss-pseudoelements')(),
@@ -29,5 +31,5 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.registerTask('default', ['postcss']);
+  grunt.registerTask('default', ['clean', 'postcss']);
 };
