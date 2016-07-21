@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var clean = require('gulp-clean');
 var postcss = require('gulp-postcss');
 
 var autoprefixer = require('autoprefixer');
@@ -22,6 +23,10 @@ gulp.task('css', function(){
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dest'));
 });
-gulp.task('default', function(){
-  gulp.start('css');
+
+gulp.task('clean', function(){
+  return gulp.src('./dest/*.css', {read: false})
+    .pipe(clean())
 });
+
+gulp.task('default', ['clean', 'css']);
