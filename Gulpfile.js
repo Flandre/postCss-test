@@ -10,6 +10,11 @@ var pseudoelements = require('postcss-pseudoelements');
 var vmin = require('postcss-vmin');
 var pixrem = require('pixrem');
 var will_change = require('postcss-will-change');
+
+var atImport = require('postcss-import');
+var mqpacker = require('css-mqpacker');
+var cssnano = require('cssnano');
+
 gulp.task('css', function(){
   var processors = [
     precss,
@@ -19,7 +24,11 @@ gulp.task('css', function(){
     opacity,
     pseudoelements,
     vmin,
-    pixrem
+    pixrem,
+
+    atImport,
+    mqpacker,
+    cssnano
   ];
   return gulp.src('./src/*.css')
     .pipe(postcss(processors))

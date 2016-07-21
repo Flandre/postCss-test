@@ -12,7 +12,11 @@ module.exports = function(grunt) {
           require('postcss-opacity')(),
           require('postcss-pseudoelements')(),
           require('postcss-vmin')(),
-          require('pixrem')()
+          require('pixrem')(),
+
+          require('postcss-import')(),
+          require('css-mqpacker')(),
+          require('cssnano')()
         ]
       },
       dist: {
