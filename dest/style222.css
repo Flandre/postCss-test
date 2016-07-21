@@ -1,18 +1,1 @@
-body{
-    background: #0000ff33;
-}
-
-.autoprefixer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.cssnext {
-    background: #ff0000;
-    background: rgba(255, 0, 0, 0.9);
-}
-
-.precss {
-background: green
-}
+body{background:#0000ff33}.autoprefixer{display:-webkit-box;display:-ms-flexbox;display:flex}.cssnext{background:red;background:rgba(255,0,0,.9)}.precss{background:green}
