@@ -1,0 +1,4 @@
+/* vmin降级处理 */
+.vmFallback {
+	width: 50vmin;
+}

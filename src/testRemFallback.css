@@ -1,0 +1,10 @@
+/* rem降级处理 */
+.remFallback {
+	height: 10rem;
+	font: 2rem Arial;
+}
+
+.remFallback:before {
+	content: '';
+	line-height: 1rem;
+}
