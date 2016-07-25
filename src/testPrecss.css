@@ -46,3 +46,15 @@ $social: twitter, facebook, youtobe;
 		background: url('img/$(icon).png')
 	}
 }
+
+/* 混合宏 */
+@define-mixin icon $network, $color {
+	.button.$(network) {
+		background-image: url('img/$(network).png');
+		background-color: $color;
+	}
+}
+
+@mixin icon twitter, blue;
+
+@mixin icon youtube, red;
