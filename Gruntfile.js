@@ -16,7 +16,9 @@ module.exports = function(grunt) {
 
           require('postcss-import')(),
           require('css-mqpacker')(),
-          require('cssnano')()
+          require('cssnano')(),
+
+          require('precss')
         ]
       },
       dist: {
