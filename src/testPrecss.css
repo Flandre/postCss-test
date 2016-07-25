@@ -38,3 +38,11 @@ $column_layout: 2;
 		margin-left: calc( 100% / $i );
 	}
 }
+
+/* each循环 */
+$social: twitter, facebook, youtobe;
+@each $icon in ($social) {
+	.icon-$(icon) {
+		background: url('img/$(icon).png')
+	}
+}
