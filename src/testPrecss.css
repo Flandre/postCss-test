@@ -1,3 +1,4 @@
+/* sass特性 */
 .menu {
 	width: 100%;
 
@@ -11,9 +12,22 @@
 
 }
 
+/* 定义变量 */
 $color: #ccc;
 $text_color: #232323;
 
 body {
 	color: $text_color;
+}
+
+/* 条件选择 */
+$column_layout: 2;
+
+.column {
+	@if $column_layout == 2 {
+		width: 50%;
+		float: left;
+  } @else {
+		width: 100%;
+	}
 }
