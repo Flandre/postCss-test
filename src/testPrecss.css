@@ -31,3 +31,10 @@ $column_layout: 2;
 		width: 100%;
 	}
 }
+
+/* 定义 for 循环 */
+@for $i from 1 to 3 {
+	p:nth-of-type($i){
+		margin-left: calc( 100% / $i );
+	}
+}
