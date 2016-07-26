@@ -18,7 +18,9 @@ module.exports = function(grunt) {
           require('css-mqpacker')(),
           require('cssnano')(),
 
-          require('precss')
+          require('precss'),
+
+          require('postcss-nested-props')
         ]
       },
       dist: {
