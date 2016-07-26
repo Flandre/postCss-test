@@ -70,3 +70,11 @@ $social: twitter, facebook, youtobe;
 .column_calculated {
 	@mixin columns_calc 2;
 }
+
+/* 嵌套应用 */
+.menu {
+	width: 100%;
+	a {
+		text-decoration: none;
+	}
+}
