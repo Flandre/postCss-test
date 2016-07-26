@@ -58,3 +58,15 @@ $social: twitter, facebook, youtobe;
 @mixin icon twitter, blue;
 
 @mixin icon youtube, red;
+
+/* calc计算 */
+@define-mixin columns_calc $count {
+	width: calc( 100% / $count );
+	@if $count > 1 {
+		float: left;
+  }
+}
+
+.column_calculated {
+	@mixin columns_calc 2;
+}
