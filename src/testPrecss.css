@@ -99,12 +99,11 @@ $social: twitter, facebook, youtobe;
 	 background-color: #FF2025;
  }
 
- /* 定义属性 */
-size: $size {
-	height: $size;
-	width: $size;
-}
-
-.square {
-	size: 50px;
-}
+ /* 属性嵌套
+.element {
+	border: {
+		width: 1px;
+		style: solid;
+		color: #ccc;
+	}
+}*/
