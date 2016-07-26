@@ -98,3 +98,13 @@ $social: twitter, facebook, youtobe;
 	 border-color: #C41A1E;
 	 background-color: #FF2025;
  }
+
+ /* 定义属性 */
+size: $size {
+	height: $size;
+	width: $size;
+}
+
+.square {
+	size: 50px;
+}

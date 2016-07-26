@@ -16,6 +16,7 @@ var mqpacker = require('css-mqpacker');
 var cssnano = require('cssnano');
 
 var precss = require('precss');
+var postnested = require('postcss-nested-props');
 
 gulp.task('css', function () {
   var processors = [
@@ -32,7 +33,8 @@ gulp.task('css', function () {
     mqpacker,
     cssnano,
 
-    precss
+    precss,
+    postnested
   ];
   return gulp.src('./src/*.css')
     .pipe(postcss(processors))
